@@ -20,3 +20,18 @@ document.addEventListener("DOMContentLoaded", () => {
     setInterval(crearCorazon, 200);
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+    const musica = document.getElementById("musica");
+
+    // Intenta reproducir el audio al cargar la página
+    function playMusic() {
+        musica.play().catch(error => {
+            console.log("El usuario debe interactuar primero para activar el audio:", error);
+        });
+    }
+
+    // Intenta reproducir el audio después de cualquier clic o toque en la pantalla
+    document.addEventListener("click", playMusic, { once: true });
+    document.addEventListener("touchstart", playMusic, { once: true });
+});
+

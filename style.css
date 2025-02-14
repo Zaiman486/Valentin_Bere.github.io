@@ -115,3 +115,12 @@ body {
     }
 }
 
+.firma {
+    position: fixed;
+    bottom: 10px;
+    right: 15px;
+    font-size: 18px;
+    font-style: italic;
+    color: #ff69b4; /* Color rosa */
+    font-weight: bold;
+}
